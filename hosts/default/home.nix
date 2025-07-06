@@ -19,7 +19,7 @@
   ];
 
   # Alacritty config
-  xdg.configFile."alacritty/alacritty.toml".source = ../../configs/alacritty.yml;
+  xdg.configFile."alacritty/alacritty.toml".source = ../../configs/alacritty.toml;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

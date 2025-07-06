@@ -45,10 +45,14 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  environment.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+    };
+
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-
+  
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -83,6 +87,9 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+
+  # Install Hyprland
+  programs.hyprland.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
