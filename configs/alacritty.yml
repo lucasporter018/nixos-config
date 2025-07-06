@@ -1,0 +1,4 @@
+# Alacritty config 
+opacity = 0.9
+
+blur = true
