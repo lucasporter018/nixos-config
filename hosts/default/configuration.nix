@@ -93,6 +93,12 @@
     neovim
     wget
     git
+    gcc
+    tree
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
   ];
 
   services.keyd = {
@@ -101,12 +107,12 @@
       ids = [ "*" ];
       settings = {
         main = {
-	  capslock = "esc";
-	  esc = "grave";
-	  };
-	};
-      };
+	      capslock = "esc";
+	      esc = "grave";
+	      };
+	    };
     };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
