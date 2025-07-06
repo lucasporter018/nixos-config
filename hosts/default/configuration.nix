@@ -43,15 +43,11 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
-  environment.sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-    };
-
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+    # Enable the GNOME Desktop Environment.
+  # services.displayManager.gdm.enable = true;
+  # services.desktopManager.gnome.enable = true;
   
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -89,7 +85,25 @@
   programs.firefox.enable = true;
 
   # Install Hyprland
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  services.greetd = {
+      enable = true;
+      settings = {
+          default_session = {
+              command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd Hyprland";
+              user = "lucasp";
+          };
+      };
+  };
+
+  environment.sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+  };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -102,6 +116,11 @@
     git
     gcc
     tree
+    wayland
+    foot
+    rofi-wayland
+    hyprpaper
+    sway
   ];
 
   fonts.packages = with pkgs; [

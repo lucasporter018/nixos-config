@@ -6,3 +6,27 @@ blur = true
 [font]
 normal.family = "JetBrainsMono Nerd Font"
 size = 12.0
+
+[colors.primary]
+background = "#1C1F1A"
+foreground = "#D8D3C2"
+
+[colors.normal]
+black   = "#2F332E" # Very dark foliage
+red     = "#B97B5B" # Muted warm brown (error)
+green   = "#5F6156" # Soft green-gray
+yellow  = "#A6A189" # Fog highlight
+blue    = "#6B8E72" # Desaturated forest green
+magenta = "#99876E" # Muted earthy brown
+cyan    = "#7A9C89" # Soft sage
+white   = "#D8D3C2" # Misty pale beige
+
+[colors.bright]
+black   = "#474C44"
+red     = "#C98C6B"
+green   = "#6F756A"
+yellow  = "#C4B690"
+blue    = "#7CA086"
+magenta = "#AA9A7E"
+cyan    = "#8BAF99"
+white   = "#E8E5D9"

@@ -16,10 +16,23 @@
   home.packages = with pkgs; [
     alacritty
     discord
+    wofi
+    nautilus
   ];
 
-  # Alacritty config
-  xdg.configFile."alacritty/alacritty.toml".source = ../../configs/alacritty.toml;
+  # Config Files 
+   xdg. configFile = {
+      # Alacritty config
+      "alacritty/alacritty.toml".source = ../../configs/alacritty.toml;
+      # Hyprland config
+      "hypr/hyprland.conf".source = ../../configs/hypr/hyprland.conf;
+      # Hyprpaper config
+      "hypr/hyprpaper.conf".source = ../../configs/hypr/hyprpaper.conf;
+      # # Nvim config
+      # "nvim".source = ../../configs/nvim;
+      # "nvim".recursive = true;
+   };
+
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
