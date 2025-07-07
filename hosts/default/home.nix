@@ -17,14 +17,14 @@
     alacritty
     vesktop
     wofi
-    nautilus
+    bibata-cursors
   ];
 
   # Config Files 
    xdg.configFile = {
 
       # Alacritty config
-      "alacritty/alacritty.toml".source = ../../configs/alacritty.toml;
+      "alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
 
       # Hyprland config
       "hypr/hyprland.conf".source = ../../configs/hypr/hyprland.conf;
@@ -33,12 +33,12 @@
       "hypr/hyprpaper.conf".source = ../../configs/hypr/hyprpaper.conf;
       
      # Waybar config
-     "waybar/config".source = ../../configs/waybar/config;
+     "waybar/config".source = ../../configs/waybar/config.jsonc;
      "waybar/style.css".source = ../../configs/waybar/style.css;
 
-      # Nvim config
-      # "nvim".source = ../../configs/nvim;
-      # "nvim".recursive = true;
+     # # Nvim config
+     # nvim.source = ../../configs/nvim;
+     # nvim.recursive = true;
    };
 
 
@@ -74,7 +74,9 @@
   #  /etc/profiles/per-user/lucasp/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
+    XCURSOR-THEME = "Bibata-Modern-Ice";
+    XCURSOR-SIZE = "20";
   };
 
   # Let Home Manager install and manage itself.

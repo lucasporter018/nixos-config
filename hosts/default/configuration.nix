@@ -74,6 +74,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
@@ -122,6 +123,7 @@
     hyprpaper
     sway
     waybar
+    mako
   ];
 
   fonts.packages = with pkgs; [
