@@ -1,7 +1,4 @@
 # Alacritty config 
-[window]
-opacity = 0.9
-blur = true
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"

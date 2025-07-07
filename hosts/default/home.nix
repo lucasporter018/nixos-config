@@ -15,20 +15,28 @@
   # environment.
   home.packages = with pkgs; [
     alacritty
-    discord
+    vesktop
     wofi
     nautilus
   ];
 
   # Config Files 
-   xdg. configFile = {
+   xdg.configFile = {
+
       # Alacritty config
       "alacritty/alacritty.toml".source = ../../configs/alacritty.toml;
+
       # Hyprland config
       "hypr/hyprland.conf".source = ../../configs/hypr/hyprland.conf;
+
       # Hyprpaper config
       "hypr/hyprpaper.conf".source = ../../configs/hypr/hyprpaper.conf;
-      # # Nvim config
+      
+     # Waybar config
+     "waybar/config".source = ../../configs/waybar/config;
+     "waybar/style.css".source = ../../configs/waybar/style.css;
+
+      # Nvim config
       # "nvim".source = ../../configs/nvim;
       # "nvim".recursive = true;
    };

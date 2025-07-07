@@ -121,6 +121,7 @@
     rofi-wayland
     hyprpaper
     sway
+    waybar
   ];
 
   fonts.packages = with pkgs; [
