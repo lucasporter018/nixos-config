@@ -1,0 +1,10 @@
+# Alacritty config 
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+size = 12.0
+
+[general]
+import ] [
+  "~/.config/alacritty/themes/autumn.vim"
+]
