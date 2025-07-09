@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
     ];
@@ -45,10 +45,10 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-    # Enable the GNOME Desktop Environment.
+  # Enable the GNOME Desktop Environment.
   # services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
-  
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -92,17 +92,17 @@
   };
 
   services.greetd = {
-      enable = true;
-      settings = {
-          default_session = {
-              command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd Hyprland";
-              user = "lucasp";
-          };
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd Hyprland";
+        user = "lucasp";
       };
+    };
   };
 
   environment.sessionVariables = {
-      NIXOS_OZONE_WL = "1";
+    NIXOS_OZONE_WL = "1";
   };
 
 
@@ -136,10 +136,10 @@
       ids = [ "*" ];
       settings = {
         main = {
-	      capslock = "esc";
-	      esc = "grave";
-	      };
-	    };
+          capslock = "esc";
+          esc = "grave";
+        };
+      };
     };
   };
 
@@ -162,4 +162,5 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-    system.stateVersion = "25.05";   }
+  system.stateVersion = "25.05";
+}

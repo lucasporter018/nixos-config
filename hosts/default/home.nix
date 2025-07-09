@@ -18,28 +18,43 @@
     vesktop
     wofi
     bibata-cursors
+    fzf
+    lazygit
+    repgrep
+    fd
+    prettier
+    black
+    stylua
+    fish
+    nixpkgs-fmt
+    google-java-format
+    mako
+    lua
+    python3
+    ripgrep
+    wl-clipboard
   ];
 
   # Config Files 
-   xdg.configFile = {
+  xdg.configFile = {
 
-      # Alacritty config
-      "alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
+    # Alacritty config
+    "alacritty/alacritty.toml".source = ../../configs/alacritty/alacritty.toml;
 
-      # Hyprland config
-      "hypr/hyprland.conf".source = ../../configs/hypr/hyprland.conf;
+    # Hyprland config
+    "hypr/hyprland.conf".source = ../../configs/hypr/hyprland.conf;
 
-      # Hyprpaper config
-      "hypr/hyprpaper.conf".source = ../../configs/hypr/hyprpaper.conf;
-      
-     # Waybar config
-     "waybar/config".source = ../../configs/waybar/config.jsonc;
-     "waybar/style.css".source = ../../configs/waybar/style.css;
+    # Hyprpaper config
+    "hypr/hyprpaper.conf".source = ../../configs/hypr/hyprpaper.conf;
 
-     # # Nvim config
-     # nvim.source = ../../configs/nvim;
-     # nvim.recursive = true;
-   };
+    # Waybar config
+    "waybar/config".source = ../../configs/waybar/config.jsonc;
+    "waybar/style.css".source = ../../configs/waybar/style.css;
+
+    # # Nvim config
+    # nvim.source = ../../configs/nvim;
+    # nvim.recursive = true;
+  };
 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -82,6 +97,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
- }
+}
 
 
